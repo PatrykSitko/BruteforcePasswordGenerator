@@ -1,0 +1,20 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "Generates unique passwords.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrykSitko/PasswordGenerator.git"
+  },
+  "keywords": [
+    "password",
+    "generator",
+    "ECMAScript"
+  ],
+  "author": "Patryk Sitko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PatrykSitko/PasswordGenerator/issues"
+  },
+  "homepage": "https://github.com/PatrykSitko/PasswordGenerator#readme"
+}
