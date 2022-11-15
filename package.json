@@ -1,11 +1,11 @@
 {
-  "name": "password-generator",
+  "name": "bruteforce-password-generator",
   "version": "1.0.0",
   "description": "Generates unique passwords.",
   "main": "./passwordGenerator.main.mjs",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PatrykSitko/PasswordGenerator.git"
+    "url": "git+https://github.com/PatrykSitko/BruteforcePasswordGenerator.git"
   },
   "keywords": [
     "password",
@@ -15,7 +15,7 @@
   "author": "Patryk Sitko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PatrykSitko/PasswordGenerator/issues"
+    "url": "https://github.com/PatrykSitko/BruteforcePasswordGenerator/issues"
   },
-  "homepage": "https://github.com/PatrykSitko/PasswordGenerator#readme"
+  "homepage": "https://github.com/PatrykSitko/BruteforcePasswordGenerator#readme"
 }
