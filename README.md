@@ -12,7 +12,7 @@
   import {
     PasswordGenerator,
     azAZ09_Combination,
-  } from "bruteforcePasswordGenerator.main";
+  } from "bruteforce-password-generator";
 
   const passwordLength = 10;
 
