@@ -1,3 +1,5 @@
+import generatePossibleCombinationsMultiDimensional from "../functions/generatePossibleCombinationsMultiDimensional.mjs";
+
 export class PasswordGenerator {
   #availableCombinations = undefined;
   #multiCombo = undefined;
