@@ -30,3 +30,13 @@
   - As the JavaScript heapspace is 4GB by default. Your application will encounter an "FATAL ERROR: Reached heap limit. Allocation failed - JavaScript heap out of memory." bottleneck.
   - I haven't added a clear method for the previously remembered combinations as this was not the purpose of this package.
   - I suggest you to enlarge the heap allocation or reinstantiate the class itself.
+
+  ## How to enlarge the heap space:
+
+  - Use the --max-old-space-size flag when running a Node. js application to increase the available memory heap.
+
+  ```javascript
+  NODE_OPTIONS=--max-old-space-size=8192 npm start
+  ```
+
+  - **Note that the flag needs to come before calling the file with the node command.**
