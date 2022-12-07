@@ -40,3 +40,7 @@
   ```
 
   - **Note that the flag needs to come before calling the file with the node command.**
+
+### Tip:
+
+- Use worker threads on the .nextPassword getter to increase the output speed.
