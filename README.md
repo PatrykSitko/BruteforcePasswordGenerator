@@ -1,4 +1,6 @@
-# Password Generator ⁿᵖᵐ ᶦ ᵇʳᵘᵗᵉᶠᵒʳᶜᵉ⁻ᵖᵃˢˢʷᵒʳᵈ⁻ᵍᵉⁿᵉʳᵃᵗᵒʳ
+# Password Generator.
+
+npm i bruteforce-password-generator
 
 - Import PasswordGenerator Class.
 - Instantiate PasswordGenerator class.
