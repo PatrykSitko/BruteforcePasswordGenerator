@@ -8,6 +8,10 @@ npm i bruteforce-password-generator
 
   - Each time an unique password.
 
+- Use .hasNextPassword method on the Instantiated Class Variable to obtain:
+
+  - If or not ".nextPassword" has a next one in store.
+
 - Example:
 
   ```javascript
@@ -26,6 +30,7 @@ npm i bruteforce-password-generator
   const generatedPassword = passwordGenerator.nextPassword;
 
   console.log(generatedPassword);
+  console.log(passwordGenerator.hasNextPassword);
   ```
 
   - This class remembers previously generated combinations and returns each time a new one of the requested length.
