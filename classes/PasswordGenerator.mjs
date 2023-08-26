@@ -15,33 +15,41 @@ export class PasswordGenerator {
     );
   }
 
+  #generateCombination(){
+    const combination = [];
+    let counter = 0;
+    while (counter++ < this.#passwordLength * 3) {
+      combination.push(
+        Math.floor(Math.random() * this.#availableCombinations)
+      );
+    }
+    return combination;
+  }
+  
+  #generatePassword(combination){
+    const password = [];
+    let index = 0;
+    while (index < this.#passwordLength * 3) {
+      password.push(
+        this.#multiCombo[combination[index++]][combination[index++]][
+          combination[index++]
+        ]
+      );
+    }
+    return password.join("");
+  }
+
   #generateNextCombination() {
     let newCombination;
     do {
-      newCombination = [];
-      let counter = 0;
-      while (counter++ < this.#passwordLength * 3) {
-        newCombination.push(
-          Math.floor(Math.random() * this.#availableCombinations)
-        );
-      }
+    const combination = this.#generateCombination();
+    newCombination = this.#generatePassword(combination);
     } while (this.#existingCombinations.includes(newCombination));
     this.#existingCombinations.push(newCombination);
   }
 
   get nextPassword() {
     this.#generateNextCombination();
-    const lastCombination =
-      this.#existingCombinations[this.#existingCombinations.length - 1];
-    const newPassword = [];
-    let index = 0;
-    while (index < this.#passwordLength * 3) {
-      newPassword.push(
-        this.#multiCombo[lastCombination[index++]][lastCombination[index++]][
-          lastCombination[index++]
-        ]
-      );
-    }
-    return newPassword.join("");
+    return this.#existingCombinations[this.#existingCombinations.length - 1];
   }
 }
