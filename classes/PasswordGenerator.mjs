@@ -52,6 +52,6 @@ export class PasswordGenerator {
   }
 
   get hasNextPassword(){
-    return this.#possibleCombinationsAmmount - this.#availableCombinationsLength > 0;
+    return this.#possibleCombinationsAmmount - this.#existingCombinations.length - 1 > 0;
   }
 }
