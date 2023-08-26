@@ -3,5 +3,5 @@ function factorial(n) {
 }
 
 export default function ammountOfCombinations(ammountOfSymbols, lengthOfRequestedCombination){
-    return factorial(ammountOfSymbols) / (factorial(lengthOfRequestedCombination) * factorial(ammountOfSymbols - lengthOfRequestedCombination));
+    return Math.ceil(factorial(ammountOfSymbols) / (factorial(lengthOfRequestedCombination) * factorial(ammountOfSymbols - lengthOfRequestedCombination)));
 }
