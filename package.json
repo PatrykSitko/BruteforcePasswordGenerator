@@ -1,6 +1,6 @@
 {
   "name": "bruteforce-password-generator",
-  "version": "2.1.6",
+  "version": "2.2.6",
   "description": "Generates unique passwords.",
   "main": "./bruteforcePasswordGenerator.main.mjs",
   "repository": {

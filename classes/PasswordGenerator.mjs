@@ -1,5 +1,8 @@
+import combinationsCalculator from "../functions/combinationsCalculator.mjs";
+
 export class PasswordGenerator {
-  #availableCombinations
+  #possibleCombinationsAmmount = undefined;
+  #availableCombinations = undefined;
   #availableCombinationsLength = undefined;
   #passwordLength = undefined;
   #existingCombinations = [];
@@ -8,6 +11,7 @@ export class PasswordGenerator {
     this.#availableCombinations = (() =>
       combinationsToUse.flat(Infinity))()
     this.#availableCombinationsLength = this.#availableCombinations.length;
+    this.#possibleCombinationsAmmount = combinationsCalculator(this.#availableCombinationsLength,passwordLength);
     this.#passwordLength = passwordLength;
   }
 
@@ -45,5 +49,9 @@ export class PasswordGenerator {
   get nextPassword() {
     this.#generateNextCombination();
     return this.#existingCombinations[this.#existingCombinations.length - 1];
+  }
+
+  get hasNextPassword(){
+    return this.#possibleCombinationsAmmount - this.#availableCombinationsLength > 0;
   }
 }
