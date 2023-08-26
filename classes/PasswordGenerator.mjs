@@ -1,26 +1,22 @@
-import { generatePossibleCombinationsMultiDimensional } from "../functions/generatePossibleCombinationsMultiDimensional.mjs";
-
 export class PasswordGenerator {
-  #availableCombinations = undefined;
-  #multiCombo = undefined;
+  #availableCombinations
+  #availableCombinationsLength = undefined;
   #passwordLength = undefined;
   #existingCombinations = [];
 
   constructor(combinationsToUse, passwordLength) {
     this.#availableCombinations = (() =>
-      combinationsToUse.flat(Infinity))().length;
+      combinationsToUse.flat(Infinity))()
+    this.#availableCombinationsLength = this.#availableCombinations.length;
     this.#passwordLength = passwordLength;
-    this.#multiCombo = generatePossibleCombinationsMultiDimensional(
-      combinationsToUse.flat(Infinity)
-    );
   }
 
   #generateCombination(){
     const combination = [];
     let counter = 0;
-    while (counter++ < this.#passwordLength * 3) {
+    while (counter++ < this.#passwordLength ) {
       combination.push(
-        Math.floor(Math.random() * this.#availableCombinations)
+        Math.floor(Math.random() * this.#availableCombinationsLength)
       );
     }
     return combination;
@@ -29,11 +25,9 @@ export class PasswordGenerator {
   #generatePassword(combination){
     const password = [];
     let index = 0;
-    while (index < this.#passwordLength * 3) {
+    while (index < this.#passwordLength ) {
       password.push(
-        this.#multiCombo[combination[index++]][combination[index++]][
-          combination[index++]
-        ]
+        this.#availableCombinations[combination[index++]]
       );
     }
     return password.join("");
